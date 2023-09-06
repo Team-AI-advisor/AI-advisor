@@ -8,6 +8,13 @@ class OverviewDataset:
         self.data = pd.read_csv(data_path)
         self.num_variables = len(self.data.columns)
         self.num_rows = len(self.data)
+        for column in self.data.columns:
+            unique_count = self.data[column].nunique()
+            if (self.data[column].dtype == "int64") or (
+                self.data[column].dtype == "int32"
+            ):
+                if unique_count < len(self.data) / 2:
+                    self.data[column] = self.data[column].astype("object")
         self.num_missing_cells = self.data.isnull().sum().sum()
         self.file_size_mb = os.path.getsize(data_path) / (1024 * 1024)
         self.variable_types = self.data.dtypes.value_counts()
@@ -19,7 +26,7 @@ class OverviewDataset:
             "변수의 수": self.num_variables,
             "행의 수": self.num_rows,
             "결측치인 셀의 수": self.num_missing_cells,
-            "파일 메모리 크기": round(self.file_size_mb, 3),
+            "파일 메모리 크기(MB)": round(self.file_size_mb, 3),
             "범주형 변수의 수": self.categorical_num,
             "수치형 변수의 수": self.numerical_num,
         }
