@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 from scipy import stats
+import os
 
 
 class Correlation:
@@ -28,7 +29,9 @@ class Correlation:
             vmax=1,
         )
         plt.title("Heat map")
-        plt.show()
+        if not os.path.exists("correlation"):
+            os.makedirs("correlation")
+        plt.savefig("correlation/heatmap.png")
 
     def find_correlation(self, threshold_min, threshold_max):
         pairs = ""
