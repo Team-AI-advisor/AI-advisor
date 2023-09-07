@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 from matplotlib import font_manager
 from scipy.stats import skew, kurtosis
+import os
 
 f_path = "C:/windows/Fonts/malgun.ttf"
 font_manager.FontProperties(fname=f_path).get_name()
@@ -20,6 +21,7 @@ class Variable:
                 if unique_count < len(self.data) / 2:
                     self.data[column] = self.data[column].astype("object")
         self.columns = self.data.columns
+        self.num_var = len(self.data.columns)
 
     def variable_statistic(self, idx):
         if self.data[self.columns[idx]].dtype != "object":
@@ -63,7 +65,6 @@ class Variable:
             plt.xlabel(self.columns[idx])
             plt.ylabel("빈도")
             plt.title(f"{self.columns[idx]}의 분포")
-            plt.show()
         else:
             self.value_counts = self.data[self.columns[idx]].value_counts()
             num_categories = len(self.value_counts)
@@ -77,7 +78,9 @@ class Variable:
                 plt.title(f"Top 10 {self.columns[idx]} 범주의 빈도수")
             else:
                 plt.title(f"{self.columns[idx]}의 빈도수")
-            plt.show()
+        if not os.path.exists("variable"):
+            os.makedirs("variable")
+        plt.savefig(f"variable/plot{idx}.png")
 
     def variable_sentence(self, idx):
         if self.data[self.columns[idx]].dtype != "object":
