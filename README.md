@@ -1,3 +1,6 @@
+# AI-advisor
+### 사용자들의 더 나은 의사결정을 위한 친절한 데이터 분석 도구
+
 ## pre-commit
 pip install pre-commit<br>
 git clone 진행한 directory로 이동<br>
