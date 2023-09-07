@@ -24,7 +24,7 @@ def save_uploaded_file(directory, file):
 
 def service_1(filename):
     path = "csv/" + filename
-    st.header("데이터셋 개요", divider="rainbow")
+    st.header(":hash: 데이터셋 개요", divider="rainbow")
     over = OverviewDataset(path)
     Chat = ChatGpt(cfg["api_key"])
     col1, col2 = st.columns([3, 5])
@@ -46,11 +46,12 @@ def service_1(filename):
 
 def service_2(filename):
     path = "csv/" + filename
-    st.header("변수", divider="rainbow")
+    st.header(":hash: 변수", divider="rainbow")
     var = Variable(path)
     Chat = ChatGpt(cfg["api_key"])
     num_variables = var.num_var
     for idx in range(num_variables):
+        st.text(f"◼️ 변수명: {var.columns[idx]}")
         tab1, tab2, tab3 = st.tabs(
             [":memo: statistic", "📈 chart", ":exclamation: advice"]
         )
@@ -71,7 +72,7 @@ def service_2(filename):
 
 def service_3(filename):
     path = "csv/" + filename
-    st.header("상관관계", divider="rainbow")
+    st.header(":hash: 상관관계", divider="rainbow")
     corr = Correlation(path)
     Chat = ChatGpt(cfg["api_key"])
     col1, col2 = st.columns([3, 5])
@@ -94,31 +95,34 @@ def service_3(filename):
 
 def service_4(filename):
     path = "csv/" + filename
-    st.header("시각화 도구", divider="rainbow")
+    st.header(":hash: 시각화 도구", divider="rainbow")
     text_input = st.text_input(
         "어떻게 차트를 생성할지 입력하세요 👇",
         placeholder="입력란",
     )
     col1, col2 = st.tabs(["📈 chart", ":exclamation: advice"])
     more_plot = MorePlot(cfg["api_key"])
-    more_plot.generate_plot(path, text_input)
-    sentence = more_plot.generate_sentence()
     Chat = ChatGpt(cfg["api_key"])
+    if text_input:
+        more_plot.generate_plot(path, text_input)
+        sentence = more_plot.generate_sentence()
     with col1:
-        st.image("exports/charts/temp_chart.png")
+        if text_input:
+            st.image("exports/charts/temp_chart.png")
     with col2:
-        st.text_area(
-            "advice",
-            Chat.generate_advice(prompt["prompt_chart"], sentence),
-            height=300,
-            max_chars=1500,
-            label_visibility="collapsed",
-        )
+        if text_input:
+            st.text_area(
+                "advice",
+                Chat.generate_advice(prompt["prompt_chart"], sentence),
+                height=300,
+                max_chars=1500,
+                label_visibility="collapsed",
+            )
 
 
 def main():
-    st.title("AI-advisor")
-    menu = ["csv 업로드", "결과", "시각화 도구"]
+    st.title("Welcome to AI-advisor!  :wave:")
+    menu = ["main", "준비중"]
     choice = st.sidebar.selectbox("메뉴", menu)
     filename = None
     if choice == menu[0]:
