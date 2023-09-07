@@ -24,7 +24,11 @@ AI-advisor는 사람들이 기술 발달의 호혜를 편히 누릴 수 있도�
 
 <br/><br/>
 
-
+## 실행 방법
+python version: 3.9.17
+pip install -r requirements.txt
+api.yaml에 api key 입력
+streamlit run app.py
 ## 🛠 Tools
 구분|내용
 ---|---
