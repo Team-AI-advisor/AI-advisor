@@ -8,6 +8,9 @@ IT 분야에 관심이 크거나 직업인이 아닌 이상 해당 기술을 일
 AI-advisor는 사람들이 기술 발달의 호혜를 편히 누릴 수 있도록 프로그램이자 플랫폼 서비스입니다.
 전문적인 데이터 과학자나 분석가의 도움 없이도 자신의 데이터에 대한 통찰력을 얻을 수 있는 서비스 제공해줍니다.
 
+## 시스템 아키텍처
+![arc](https://github.com/Team-AI-advisor/AI-advisor/assets/90888774/2abb8b4e-2a8b-4dea-97f5-95a72ab3d948)
+
 ## pre-commit
 pip install pre-commit<br>
 git clone 진행한 directory로 이동<br>
