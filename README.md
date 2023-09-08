@@ -1,4 +1,4 @@
-![image](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/877805bb-c567-4cf0-a49e-8baaa4174f03)
+![1](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/5da672d2-3362-41b0-8100-4644d0f108ee)
 
 <br/>
 사용자들의 더 나은 의사결정을 위한 친절한 데이터 분석 도구
@@ -20,7 +20,7 @@ AI-advisor는 사람들이 기술 발달의 호혜를 편히 누릴 수 있도�
 <br/><br/>
 
 ## 시스템 아키텍처
-![arc](https://github.com/Team-AI-advisor/AI-advisor/assets/90888774/2abb8b4e-2a8b-4dea-97f5-95a72ab3d948)
+![ai_advisor_아키텍처_구성도](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/b96e2a00-4a10-48e3-aa0b-e58067e58395)
 
 <br/><br/>
 
@@ -54,7 +54,7 @@ AI 라이브러리|	OpenAI, PandasAI
 
 ---
 
-![image](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/874262aa-8724-4b61-9f96-20686bdea5ce)
+![2](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/8b6f610d-2228-4606-89e1-20ee88bd1886)
 
 <br/>
 
@@ -68,7 +68,7 @@ AI 라이브러리|	OpenAI, PandasAI
 
 ---
 
-![image](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/6164983e-9619-4fac-b6b8-71793a2ffe0a)
+![3](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/7937d5cd-b712-4b29-90af-fad1d3c32717)
 
 
 <br/>
@@ -85,9 +85,10 @@ AI 라이브러리|	OpenAI, PandasAI
 
 ---
 
-![image](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/89e67c25-b09c-46e8-a874-87ecaa171173) <br/>
-![image](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/2d899d1b-c3f1-4c59-870c-ca6288a7ef18) <br/>
-![image](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/108c7054-4aee-4a30-bf2a-74ebde7dacbd) <br/>
+
+![4](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/218fee1a-65e3-4a8a-b7e3-b55028eb619a) <br/>
+![5](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/411d7767-fd4b-4382-a0b0-17a7f2ea793b) <br/>
+![6](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/efc9db1f-5f37-4c70-82c3-e4bd2a2bebb6) <br/>
 
 
 <br/><br/>
@@ -103,8 +104,7 @@ AI 라이브러리|	OpenAI, PandasAI
 
 ---
 
-![image](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/8ae005cf-2295-4d77-8297-80b9f69a3164)
-
+![7](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/eae012c4-420f-46a4-8c0b-59c501f9dd50)
 
 <br/><br/><br/>
 
@@ -113,14 +113,13 @@ AI 라이브러리|	OpenAI, PandasAI
 <br/>
 시각화 도구 단계입니다. <br/>
 사용자가 생성하고 싶은 차트에 대한 설명을 입력하면 Pandas AI가 맞춤형 그래프와 그에 대한 설명을 도출합니다. <br/>
-이후 chatGPT API를 통해 해당 그래프를 기반으로 Advice가 도출됩니다.
+이후 chatGPT API를 통해 해당 그래프를 기반으로 Advice가 도출됩니다.<br/>
 
 ### ▼ 사진으로 확인하기
 
 ---
 
-![image](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/cc2ae787-cebf-4290-994b-5b8058603a92) <br/><br/>
-![image](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/c2473663-b650-4db0-83ba-1caae7bbeaf2)
+![8](https://github.com/Team-AI-advisor/AI-advisor/assets/124342239/faeb67dd-accc-4a7a-84af-4e163be05323)
 
 
 <br/><br/>
